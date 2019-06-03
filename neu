@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+# 根据实际位置更改脚本路径信息
+/usr/bin/python /usr/local/neu/eone.py
+

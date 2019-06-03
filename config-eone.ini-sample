@@ -1,0 +1,24 @@
+# Configuration for ipgw and other services.
+[eone]
+# 网关账号
+eone_account = 1700000
+# 网关密码
+eone_passwd = MyPassword
+# 认证地址
+eone_tpass_url = https://pass.neu.edu.cn/tpass/login?service=https://ipgw.neu.edu.cn/srun_cas.php
+# 注销地址
+eone_logout_url = https://ipgw.neu.edu.cn/srun_cas.php
+# 会话ID
+session_id = logs/session_id.log
+
+[ipgw]
+# 在线信息
+auth_action_url = http://202.118.1.87/include/auth_action.php
+# 测试联网链接
+test_connection_url = http://www.baidu.com/
+
+[access]
+access_forbidden_file = logs/access_forbidden.log
+
+[logout]
+sid_file = logs/logout_sid.log
