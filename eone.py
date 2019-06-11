@@ -54,7 +54,7 @@ def auth_eone_login(username, password):
     except:
         return 601
     Language = res.cookies['Language']
-    JSESSIONID = res.cookies['JSESSIONID']
+    JSESSIONID = res.cookies['jsessionid_tpass']
     with open(work_folder + "/" + session_id_file, 'w+') as fw:
         fw.write(str(JSESSIONID))
 
@@ -67,7 +67,7 @@ def auth_eone_login(username, password):
 
     cookie_jar = RequestsCookieJar()
     cookie_jar.set("Language", Language, domain="pass.neu.edu.cn")
-    cookie_jar.set("JSESSIONID", JSESSIONID, domain="pass.neu.edu.cn")
+    cookie_jar.set("jsessionid_tpass", JSESSIONID, domain="pass.neu.edu.cn")
     try:
         res = requests.post(eone_tpass_url, req_data, cookies=cookie_jar)
     except:
